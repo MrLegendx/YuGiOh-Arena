@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="YGOScript.js"></script>
+<link rel="stylesheet" href="YGOStyles.css"> </link>
+<title>YGO Arena</title>
+</head>
+<body onload="buttonDisabled('b1'); buttonDisabled('b2'); buttonDisabled('b3'); buttonDisabled('confirmButton'); buttonDisabled('downloadButton');">
+
+<div class="area" >
+	<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+	
+		<div class="main">
+			<h1>YGO Arena</h1>
+			<p>Press the START button when you are ready:
+				<button type="button" id="genRounds" onclick="genRounds();selectRound(); buttonDisabled('genRounds'); buttonEnabled('b1'); buttonEnabled('b2'); buttonEnabled('b3'); buttonEnabled('confirmButton');"> START </button>
+			</p>
+			<p id="roundCounter">Round 1: </p>
+			<b><p id ="currentCard">Current Selected Card: </p></b>
+		</div>
+
+		<div id="deck" class="deck"> Current Deck:
+			<table id="deckTable"></table>
+		</div>
+
+		<div class="cards">
+			<button type="button" id="b1" onclick="cardSelected('b1'); buttonEnabled('confirmButton');">CARD 1</button>
+			<button type="button" id="b2" onclick="cardSelected('b2'); buttonEnabled('confirmButton');">CARD 2</button>
+			<button type="button" id="b3" onclick="cardSelected('b3'); buttonEnabled('confirmButton');">CARD 3</button>
+		</div>
+
+<br><br>
+
+		<div class="confirm">
+			<button type="button" id="confirmButton" onclick="confirmCard(); buttonDisabled('confirmButton');"><strong>CONFIRM SELECTION</strong></button>
+			<button type="button" id="downloadButton" onclick="download('Decklist.txt', decklist); buttonDisabled('downloadButton')">Download Deck</button>
+		</div>
+
+		<p id="deckListHolder"></p>
+		</ul>
+</div>
+
+</body>
+</html>
