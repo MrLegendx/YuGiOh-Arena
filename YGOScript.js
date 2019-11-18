@@ -171,7 +171,7 @@ function displayCards() {
 	var card3 = selectCards[dc + 2];
 
 	// "/Users/sergi/OneDrive/Desktop/YuGiOh Arena/Pictures/Hitotsu-Me Giant.png";
-	var img1 = "/Users/sergi/OneDrive/Desktop/YuGiOh Arena/Pictures2/" + card1 + ".jpg";
+	var img1 = "https://github.com/MrLegendx/YuGiOh-Arena/blob/master/Pictures2/" + card1 + ".jpg";
 	var img1html = '<img src="' + img1 + '" />';
 	var img2 = "/Users/sergi/OneDrive/Desktop/YuGiOh Arena/Pictures2/" + card2 + ".jpg";
 	var img2html = '<img src="' + img2 + '" />';
